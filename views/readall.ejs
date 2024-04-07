@@ -1,0 +1,26 @@
+<%- include("./partials/header")%>
+<!--  -->
+<h1 style="text-align: center">This Is Read All Page</h1>
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+    <% books.forEach((book, index)=>{ %>
+        <ul>
+          <h4>BOOK-<%= index+1 %></h1>
+          <div class="card" style="width: 20rem; background-color: bisque">
+            <div class="card-header"><%= book.bookname %></div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= book.booktitle %></li>
+              <li class="list-group-item"><%= book.author %></li>
+              <li class="list-group-item"><%= book.discription %></li>
+            </ul>
+            <div style="display: flex; justify-content: space-between; padding: 0 10px">
+              <a href="/delete/<%= index %>"><button>Delete</button></a>
+              <a href="/update/<%= index %>"><button>Update</button></a>
+            </div>
+          </div>
+        </ul>
+        <% }) %>
+</div>
+
+<!--  -->
+<%- include("./partials/footer")%>

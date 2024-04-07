@@ -1,0 +1,9 @@
+body {
+  padding: 2%;
+}
+button {
+  padding: 4px 4px;
+  /* border: 2px solid black; */
+  border-radius: 50px;
+  background-color: transparent;
+}
